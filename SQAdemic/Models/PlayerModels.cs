@@ -7,5 +7,9 @@ namespace SQAdemic.Models
 {
     public class PlayerModels
     {
+        public class PlayerBase
+        {
+            public List<Card> Hand
+        }
     }
 }
