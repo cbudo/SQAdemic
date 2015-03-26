@@ -21,9 +21,9 @@ namespace SQAdemic.Models
         }
         public class Card
         {
-            public string CityName { get; set; }
-            public cardType CardType { get; set; }
-            public color CityColor { get; set; }
+            public string CityName;
+            //public cardType CardType;
+            //public color CityColor;
 
         }
         public class infectionCubeCount
@@ -35,14 +35,14 @@ namespace SQAdemic.Models
         }
         public class Cures
         {
-            public cureState RedCure { get; set; }
-            public cureState BlueCure { get; set; }
-            public cureState BlackCure { get; set; }
-            public cureState YellowCure { get; set; }
+            //public cureState RedCure;
+            //public cureState BlueCure;
+            //public cureState BlackCure;
+            //public cureState YellowCure;
         }
         public class City
         {
-            public string Name { get; }
+            public string Name;
             private int redCubes = 0;
             private int blackCubes = 0;
             private int blueCubes = 0;
