@@ -1,0 +1,67 @@
+﻿.map {
+    float: right;
+    width: 80%;
+}
+
+.sideboard{
+    float: left;
+    width:20%;
+}
+
+.container{
+    margin-right: auto;
+    margin-left: auto;
+    max-width:1600px;
+}
+
+.player{
+    background-color:#3C3C3C;
+    width:50%;
+}
+
+.hiddenCards{
+   display: none;
+   padding: 5px;
+}
+
+.hiddenCards li{
+    text-decoration: none;
+    width:100%;
+    display: block;
+    padding: 4px;
+}
+
+.yellow{
+    background-color:#FFF666;
+}
+
+.red{
+    background-color:#FF4D4D;
+}
+
+.blue{
+    background-color:#256EB8;
+}
+.black{
+    background-color:black;
+    color:#FFFFFF;
+}
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+	background-color: #2F3036; 
+	color:#FFFFFF;
+	width:100%;
+    padding: 10px;
+}
+
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #hand1{
+    display: block;
+}
+

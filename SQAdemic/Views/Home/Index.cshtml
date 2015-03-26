@@ -1,5 +1,68 @@
 ﻿<!--{
     ViewBag.Title = "Home Page";
 }-->
+<link href="~/Content/Index.css" rel="stylesheet">
 
-<img src="~/Images/pandemicMap.jpg" />
+
+<div class="map">
+    <img src="~/Images/pandemicMap.jpg" />
+</div>
+
+
+<div class="sideboard">
+    <div class="players">
+        <h2>Players</h2>
+        <div class="player">
+            <label for="show-menu1" class="show-menu">
+                Player One
+            </label>
+            <input type="checkbox" id="show-menu1" role="button" />
+            <ul class="hiddenCards" id="hand1">
+                <li class="yellow">Lima</li>
+                <li class="red">Hong Kong</li>
+                <li class="blue">Chicago</li>
+            </ul>
+        </div>
+        <div class="player">
+            <label for="show-menu2" class="show-menu">
+                Player Two
+            </label>
+            <input type="checkbox" id="show-menu2" role="button" />
+            <ul class="hiddenCards" id="hand1">
+                <li class="yellow">Lima</li>
+                <li class="red">Hong Kong</li>
+                <li class="blue">Chicago</li>
+            </ul>
+        </div>
+        <div class="player">
+            <label for="show-menu3" class="show-menu">
+                Player Three
+            </label>
+            <input type="checkbox" id="show-menu3" role="button" />
+            <ul class="hiddenCards" id="hand1">
+                <li class="yellow">Lima</li>
+                <li class="red">Hong Kong</li>
+                <li class="black">Baghdad</li>
+            </ul>
+        </div>
+        <div class="player">
+            <label for="show-menu4" class="show-menu">
+                Player Four
+            </label>
+            <input type="checkbox" id="show-menu4" role="button" />
+            <ul class="hiddenCards" id="hand1">
+                <li class="yellow">Lima</li>
+                <li class="red">Hong Kong</li>
+                <li class="black">Baghdad</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cubes">
+        <h3>Remaining Cubes</h3>
+        <p>Yellow:0/24</p>
+        <p>Red:24/24</p>
+        <p>Blue:24/24</p>
+        <p>Black:16/24</p>
+    </div>
+</div>
