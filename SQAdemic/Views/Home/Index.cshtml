@@ -12,7 +12,7 @@
 <div class="sideboard">
     <div class="players">
         <h2>Players</h2>
-        <div class="player">
+        <div class="dropdownmenu">
             <label for="show-menu1" class="show-menu">
                 Player One
             </label>
@@ -23,7 +23,7 @@
                 <li class="blue">Chicago</li>
             </ul>
         </div>
-        <div class="player">
+        <div class="dropdownmenu">
             <label for="show-menu2" class="show-menu">
                 Player Two
             </label>
@@ -34,7 +34,7 @@
                 <li class="blue">Chicago</li>
             </ul>
         </div>
-        <div class="player">
+        <div class="dropdownmenu">
             <label for="show-menu3" class="show-menu">
                 Player Three
             </label>
@@ -45,7 +45,7 @@
                 <li class="black">Baghdad</li>
             </ul>
         </div>
-        <div class="player">
+        <div class="dropdownmenu">
             <label for="show-menu4" class="show-menu">
                 Player Four
             </label>
@@ -59,10 +59,42 @@
     </div>
 
     <div class="cubes">
-        <h3>Remaining Cubes</h3>
-        <p>Yellow:0/24</p>
-        <p>Red:24/24</p>
-        <p>Blue:24/24</p>
-        <p>Black:16/24</p>
+        <h2>Remaining Cubes</h2>
+        <p>Yellow: &emsp; 0/24</p>
+        <p>Red: &emsp; 24/24</p>
+        <p>Blue: &emsp; 24/24</p>
+        <p>Black: &emsp; 16/24</p>
+    </div>
+
+    <div class="Actions">
+        <h2>Take an Action</h2>
+        <div class="basic action">
+            <div class="dropdownmenu">
+                <label for="show-menu-basic" class="show-menu">
+                    Basic Actions
+                </label>
+                <input type="checkbox" id="show-menu-basic" role="button" />
+                <ul class="hiddenCards" id="hand1">
+                    <li title="Move your pawn to an adjacent city">Drive (Or Ferry)</li>
+                    <li title="Discard a card to move your pawn to the city pictured on it">Direct Flight</li>
+                    <li title="Discard the card showing your current city and move to any city on the board">Charter Flight</li>
+                    <li title="Move to a city containing a research station if your pawn is in a city containing a station">Shuttle Flight</li>
+                </ul>
+            </div>
+        </div>
+        <div class="specialactions action">
+            <div class="dropdownmenu">
+                <label for="show-menu-special" class="show-menu">
+                    Special Actions
+                </label>
+                <input type="checkbox" id="show-menu-special" role="button" />
+                <ul class="hiddenCards" id="hand1">
+                    <li title="Discard the card showing your current city to build a Research Station there">Build a Research Station</li>
+                    <li title="Discard 5 cards of the same color to cure the disease of that color. Your pawn must be in a city containing a research station">Discover a Cure</li>
+                    <li title="Remove a disease cube from the city your pawn occupies. If the cure has been found, remove all cubes of that color from the city">Treat Disease</li>
+                    <li title="Pass a card from one player to another. Both players pawn must be in the city pictured on the card that is passed">Share Knowledge</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
