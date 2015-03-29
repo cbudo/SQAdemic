@@ -48,7 +48,7 @@ namespace SQAdemic.Models
             private int blueCubes = 0;
             private int yellowCubes = 0;
             private bool researchStation = false;
-            private List<City> AdjacentCities;
+            private List<City> adjacentCities;
             public void infectCity(string color, int numToAdd)
             {
 
