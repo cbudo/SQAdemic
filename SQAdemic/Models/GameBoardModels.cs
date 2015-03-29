@@ -43,6 +43,7 @@ namespace SQAdemic.Models
         public class City
         {
             public string Name;
+            public string color;
             private int redCubes = 0;
             private int blackCubes = 0;
             private int blueCubes = 0;
