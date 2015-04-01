@@ -14,16 +14,16 @@ namespace SQAdemic.Models
             cubeCount = new infectionCubeCount();
             cubeCount.blackCubes = cubeCount.redCubes = cubeCount.blueCubes = cubeCount.yellowCubes = 24;
             cureStatus = new Cures();
-            cureStatus.BlackCure = cureStatus.BlueCure = cureStatus.RedCure = cureStatus.YellowCure = cureState.NotCured;
+            cureStatus.BlackCure = cureStatus.BlueCure = cureStatus.RedCure = cureStatus.YellowCure = CURESTATE.NotCured;
         }
         public int[] getCubes()
         {
             int[] cubes = { cubeCount.blackCubes, cubeCount.redCubes, cubeCount.blueCubes, cubeCount.yellowCubes };
             return cubes;
         }
-        enum color{ red, black, blue, yellow }
-        enum cardType { Infection, Player, Special }
-        public enum cureState { NotCured, Cured, Sunset }
+        public enum COLOR{ red, black, blue, yellow }
+        public enum CARDTYPE { Infection, Player, Special }
+        public enum CURESTATE { NotCured, Cured, Sunset }
         public class onBoard
         {
             //stacks for infection and player deck
@@ -36,8 +36,8 @@ namespace SQAdemic.Models
         public class Card
         {
             public string CityName;
-            cardType CardType {get;set;}
-            color CityColor { get; set; }
+            CARDTYPE CardType {get;set;}
+            COLOR CityColor { get; set; }
 
         }
         public class infectionCubeCount
@@ -49,12 +49,12 @@ namespace SQAdemic.Models
         }
         public class Cures
         {
-            public cureState RedCure{get;set;}
-            public cureState BlueCure { get; set; }
-            public cureState BlackCure { get; set; }
-            public cureState YellowCure { get; set; }
+            public CURESTATE RedCure{get;set;}
+            public CURESTATE BlueCure { get; set; }
+            public CURESTATE BlackCure { get; set; }
+            public CURESTATE YellowCure { get; set; }
         }
-        public class City
+    /**    public class City
         {
             public string Name;
             public string color;
@@ -64,6 +64,7 @@ namespace SQAdemic.Models
             private int yellowCubes = 0;
             private bool researchStation = false;
             private List<City> adjacentCities;
+
 
             public void setAdjacentCities(List<City> cities)
             {
@@ -84,6 +85,6 @@ namespace SQAdemic.Models
             {
 
             }
-        }
+        }**/
     }
 }

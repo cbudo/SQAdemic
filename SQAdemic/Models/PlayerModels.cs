@@ -10,12 +10,12 @@ namespace SQAdemic.Models
         public class Player
         {
             public List<GameBoardModels.Card> hand = new List<GameBoardModels.Card>();
-            public GameBoardModels.City location { get; set; }
+            public City location { get; set; }
             public Player()
             {
                     
             }
-            public void move(GameBoardModels.City destination)
+            public void move(City destination)
             {
 
             }

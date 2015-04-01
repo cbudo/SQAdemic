@@ -2,68 +2,66 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using SQAdemic.Models;
 
 namespace SQAdemic.Models
 {
     public class Create
     {
         //create the blues
-        GameBoardModels.City sanFransisco = new GameBoardModels.City();
-        GameBoardModels.City chicago = new GameBoardModels.City();
-        GameBoardModels.City montreal = new GameBoardModels.City();
-        GameBoardModels.City newYork = new GameBoardModels.City();
-        GameBoardModels.City washington = new GameBoardModels.City();
-        GameBoardModels.City atlanta = new GameBoardModels.City();
-        GameBoardModels.City london = new GameBoardModels.City();
-        GameBoardModels.City madrid = new GameBoardModels.City();
-        GameBoardModels.City paris = new GameBoardModels.City();
-        GameBoardModels.City milan = new GameBoardModels.City();
-        GameBoardModels.City stPetersburg = new GameBoardModels.City();
-        GameBoardModels.City essen = new GameBoardModels.City();
+        City sanFransisco = new City(GameBoardModels.COLOR.blue);
+        City chicago = new City(GameBoardModels.COLOR.blue);
+        City montreal = new City(GameBoardModels.COLOR.blue);
+        City newYork = new City(GameBoardModels.COLOR.blue);
+        City washington = new City(GameBoardModels.COLOR.blue);
+        City atlanta = new City(GameBoardModels.COLOR.blue);
+        City london = new City(GameBoardModels.COLOR.blue);
+        City madrid = new City(GameBoardModels.COLOR.blue);
+        City paris = new City(GameBoardModels.COLOR.blue);
+        City milan = new City(GameBoardModels.COLOR.blue);
+        City stPetersburg = new City(GameBoardModels.COLOR.blue);
+        City essen = new City(GameBoardModels.COLOR.blue);
 
         //create the yellows
-        GameBoardModels.City losAngeles = new GameBoardModels.City();
-        GameBoardModels.City mexicoCity = new GameBoardModels.City();
-        GameBoardModels.City miami = new GameBoardModels.City();
-        GameBoardModels.City bogota = new GameBoardModels.City();
-        GameBoardModels.City lima = new GameBoardModels.City();
-        GameBoardModels.City saoPaulo = new GameBoardModels.City();
-        GameBoardModels.City buenosAires = new GameBoardModels.City();
-        GameBoardModels.City santiago = new GameBoardModels.City();
-        GameBoardModels.City lagos = new GameBoardModels.City();
-        GameBoardModels.City khartoum = new GameBoardModels.City();
-        GameBoardModels.City kinshasa = new GameBoardModels.City();
-        GameBoardModels.City johannesburg = new GameBoardModels.City();
+        City losAngeles = new City(GameBoardModels.COLOR.yellow);
+        City mexicoCity = new City(GameBoardModels.COLOR.yellow);
+        City miami = new City(GameBoardModels.COLOR.yellow);
+        City bogota = new City(GameBoardModels.COLOR.yellow);
+        City lima = new City(GameBoardModels.COLOR.yellow);
+        City saoPaulo = new City(GameBoardModels.COLOR.yellow);
+        City buenosAires = new City(GameBoardModels.COLOR.yellow);
+        City santiago = new City(GameBoardModels.COLOR.yellow);
+        City lagos = new City(GameBoardModels.COLOR.yellow);
+        City khartoum = new City(GameBoardModels.COLOR.yellow);
+        City kinshasa = new City(GameBoardModels.COLOR.yellow);
+        City johannesburg = new City(GameBoardModels.COLOR.yellow);
 
         //create the blacks
-        GameBoardModels.City algiers = new GameBoardModels.City();
-        GameBoardModels.City cairo = new GameBoardModels.City();
-        GameBoardModels.City istanbul = new GameBoardModels.City();
-        GameBoardModels.City moscow = new GameBoardModels.City();
-        GameBoardModels.City baghdad = new GameBoardModels.City();
-        GameBoardModels.City riyadh = new GameBoardModels.City();
-        GameBoardModels.City tehran = new GameBoardModels.City();
-        GameBoardModels.City karachi = new GameBoardModels.City();
-        GameBoardModels.City delhi = new GameBoardModels.City();
-        GameBoardModels.City mumbai = new GameBoardModels.City();
-        GameBoardModels.City chennai = new GameBoardModels.City();
-        GameBoardModels.City kolkata = new GameBoardModels.City();
+        City algiers = new City(GameBoardModels.COLOR.black);
+        City cairo = new City(GameBoardModels.COLOR.black);
+        City istanbul = new City(GameBoardModels.COLOR.black);
+        City moscow = new City(GameBoardModels.COLOR.black);
+        City baghdad = new City(GameBoardModels.COLOR.black);
+        City riyadh = new City(GameBoardModels.COLOR.black);
+        City tehran = new City(GameBoardModels.COLOR.black);
+        City karachi = new City(GameBoardModels.COLOR.black);
+        City delhi = new City(GameBoardModels.COLOR.black);
+        City mumbai = new City(GameBoardModels.COLOR.black);
+        City chennai = new City(GameBoardModels.COLOR.black);
+        City kolkata = new City(GameBoardModels.COLOR.black);
 
         //create the reds
-        GameBoardModels.City beijing = new GameBoardModels.City();
-        GameBoardModels.City seoul = new GameBoardModels.City();
-        GameBoardModels.City shanghai = new GameBoardModels.City();
-        GameBoardModels.City tokyo = new GameBoardModels.City();
-        GameBoardModels.City osaka = new GameBoardModels.City();
-        GameBoardModels.City taipei = new GameBoardModels.City();
-        GameBoardModels.City hongKong = new GameBoardModels.City();
-        GameBoardModels.City bangkok = new GameBoardModels.City();
-        GameBoardModels.City manila = new GameBoardModels.City();
-        GameBoardModels.City hoChiMinhCity = new GameBoardModels.City();
-        GameBoardModels.City jakarta = new GameBoardModels.City();
-        GameBoardModels.City sydney = new GameBoardModels.City();
-
-
-
+        City beijing = new City(GameBoardModels.COLOR.red);
+        City seoul = new City(GameBoardModels.COLOR.red);
+        City shanghai = new City(GameBoardModels.COLOR.red);
+        City tokyo = new City(GameBoardModels.COLOR.red);
+        City osaka = new City(GameBoardModels.COLOR.red);
+        City taipei = new City(GameBoardModels.COLOR.red);
+        City hongKong = new City(GameBoardModels.COLOR.red);
+        City bangkok = new City(GameBoardModels.COLOR.red);
+        City manila = new City(GameBoardModels.COLOR.red);
+        City hoChiMinhCity = new City(GameBoardModels.COLOR.red);
+        City jakarta = new City(GameBoardModels.COLOR.red);
+        City sydney = new City(GameBoardModels.COLOR.red);
     }
 }
