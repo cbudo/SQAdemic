@@ -26,9 +26,9 @@ namespace SQAdemic.Models
         public enum CARDTYPE { Infection, Player, Special }
         public enum CURESTATE { NotCured, Cured, Sunset }
 
-        public cureState[] getCures()
+        public CURESTATE[] getCures()
         {
-            cureState[] cures = {CURESTATUS.BlackCure , CURESTATUS.BlueCure , CURESTATUS.RedCure , CURESTATUS.YellowCure};
+            CURESTATE[] cures = { CURESTATUS.BlackCure, CURESTATUS.BlueCure, CURESTATUS.RedCure, CURESTATUS.YellowCure };
             return cures;
         }
 
