@@ -64,6 +64,17 @@ namespace SQAdemic.Models
             private int yellowCubes = 0;
             private bool researchStation = false;
             private List<City> adjacentCities;
+
+            public void setAdjacentCities(List<City> cities)
+            {
+                this.adjacentCities = cities;
+            }
+
+            public List<City> getAdjacentCities()
+            {
+                return adjacentCities;
+            }
+
             public void infectCity(string color, int numToAdd)
             {
 
