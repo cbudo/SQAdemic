@@ -23,7 +23,7 @@ namespace SQAdemic.Models
         }
         public cureState[] getCures()
         {
-            cureState[] cures = new cureState[1];
+            cureState[] cures = {cureStatus.BlackCure , cureStatus.BlueCure , cureStatus.RedCure , cureStatus.YellowCure};
             return cures;
         }
         enum color{ red, black, blue, yellow }
