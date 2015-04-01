@@ -8,22 +8,30 @@ namespace SQAdemic.Models
     public class GameBoardModels
     {
         infectionCubeCount cubeCount;
-        Cures cureStatus;
+        Cures CURESTATUS;
         public GameBoardModels()
         {
             cubeCount = new infectionCubeCount();
             cubeCount.blackCubes = cubeCount.redCubes = cubeCount.blueCubes = cubeCount.yellowCubes = 24;
-            cureStatus = new Cures();
-            cureStatus.BlackCure = cureStatus.BlueCure = cureStatus.RedCure = cureStatus.YellowCure = CURESTATE.NotCured;
+            CURESTATUS = new Cures();
+            CURESTATUS.BlackCure = CURESTATUS.BlueCure = CURESTATUS.RedCure = CURESTATUS.YellowCure = CURESTATE.NotCured;
         }
         public int[] getCubes()
         {
             int[] cubes = { cubeCount.blackCubes, cubeCount.redCubes, cubeCount.blueCubes, cubeCount.yellowCubes };
             return cubes;
         }
+
         public enum COLOR{ red, black, blue, yellow }
         public enum CARDTYPE { Infection, Player, Special }
         public enum CURESTATE { NotCured, Cured, Sunset }
+
+        public cureState[] getCures()
+        {
+            cureState[] cures = {CURESTATUS.BlackCure , CURESTATUS.BlueCure , CURESTATUS.RedCure , CURESTATUS.YellowCure};
+            return cures;
+        }
+
         public class onBoard
         {
             //stacks for infection and player deck
