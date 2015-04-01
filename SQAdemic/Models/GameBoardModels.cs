@@ -21,6 +21,11 @@ namespace SQAdemic.Models
             int[] cubes = { cubeCount.blackCubes, cubeCount.redCubes, cubeCount.blueCubes, cubeCount.yellowCubes };
             return cubes;
         }
+        public cureState[] getCures()
+        {
+            cureState[] cures = new cureState[1];
+            return cures;
+        }
         enum color{ red, black, blue, yellow }
         enum cardType { Infection, Player, Special }
         public enum cureState { NotCured, Cured, Sunset }
