@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using SQAdemic.Models;
 
 namespace SQAdemic.Controllers
 {
@@ -12,12 +13,6 @@ namespace SQAdemic.Controllers
         public ActionResult Index()
         {
             return View();
-        }
-        public JsonResult playerDraw()
-        {
-            JsonResult jsonData = new JsonResult();
-
-            return jsonData;
         }
     }
 }

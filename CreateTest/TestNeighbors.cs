@@ -10,11 +10,11 @@ namespace CreateTest
         [TestMethod]
         public void TestSanFranNeighbors()
         {
-            List<SQAdemic.Models.GameBoardModels.City> sflist = new List<SQAdemic.Models.GameBoardModels.City>();
-            SQAdemic.Models.GameBoardModels.City chicago =  new SQAdemic.Models.GameBoardModels.City();
-            SQAdemic.Models.GameBoardModels.City losAngeles =  new SQAdemic.Models.GameBoardModels.City();
-            SQAdemic.Models.GameBoardModels.City tokyo =  new SQAdemic.Models.GameBoardModels.City();
-            SQAdemic.Models.GameBoardModels.City manila =  new SQAdemic.Models.GameBoardModels.City();
+            List<SQAdemic.Models.City> sflist = new List<SQAdemic.Models.City>();
+            SQAdemic.Models.City chicago =  new SQAdemic.Models.City();
+            SQAdemic.Models.City losAngeles =  new SQAdemic.Models.City();
+            SQAdemic.Models.City tokyo =  new SQAdemic.Models.City();
+            SQAdemic.Models.City manila =  new SQAdemic.Models.City();
             sflist.Add(chicago);
             sflist.Add(losAngeles);
             sflist.Add(tokyo);

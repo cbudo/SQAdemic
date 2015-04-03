@@ -10,6 +10,7 @@ namespace SQAdemic.Models
         infectionCubeCount cubeCount;
         Cures CURESTATUS;
         public Card[] playerDeck = new Card[58];
+        int playerDeckPoint = -1;
         public GameBoardModels()
         {
             cubeCount = new infectionCubeCount();
@@ -73,6 +74,11 @@ namespace SQAdemic.Models
             public CURESTATE BlueCure { get; set; }
             public CURESTATE BlackCure { get; set; }
             public CURESTATE YellowCure { get; set; }
+        }
+        public Card drawCard()
+        {
+            playerDeckPoint++;
+            return playerDeck[playerDeckPoint];
         }
     /**    public class City
         {

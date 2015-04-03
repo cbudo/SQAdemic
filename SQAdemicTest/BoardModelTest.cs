@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using SQAdemic;
+using SQAdemic.Models;
 using Rhino.Mocks;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SQAdemicTest
 {
@@ -20,11 +21,37 @@ namespace SQAdemicTest
             int[] cubeExpected = {24,24,24,24};
             SQAdemic.Models.GameBoardModels.CURESTATE notCured = SQAdemic.Models.GameBoardModels.CURESTATE.NotCured;
             SQAdemic.Models.GameBoardModels.CURESTATE[] cures = { notCured, notCured, notCured, notCured };
-            Assert.AreEqual(cubeExpected, BoardModel.getCubes());
-            Assert.AreEqual(cures, BoardModel.getCures());
+            NUnit.Framework.Assert.AreEqual(cubeExpected, BoardModel.getCubes());
+            NUnit.Framework.Assert.AreEqual(cures, BoardModel.getCures());
             
+        }
+        [Test()]
+        public void TestThatPlayerDrawsCard()
+        {
+            List<GameBoardModels.Card> cities = new List<GameBoardModels.Card>();
+            cities.Add(new GameBoardModels.Card("CityName", GameBoardModels.CARDTYPE.Player));
+            createDeck deckCreator = new createDeck(BoardModel,cities);
+            deckCreator.makePlayerDeck();
+            NUnit.Framework.Assert.AreNotEqual(null, BoardModel.drawCard());
+
         }
 
     }
+    [TestClass]
+    public class testPlayers
+    {
+        private SQAdemic.Models.GameBoardModels BoardModel = new SQAdemic.Models.GameBoardModels();
+         [TestMethod]
+         public void TestThatPlayerDrawsCard()
+            {
+                List<GameBoardModels.Card> cities = new List<GameBoardModels.Card>();
+                cities.Add(new GameBoardModels.Card("CityName", GameBoardModels.CARDTYPE.Player));
+                createDeck deckCreator = new createDeck(BoardModel,cities);
+                deckCreator.makePlayerDeck();
+                Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotEqual(null, BoardModel.drawCard());
+             
+            }
+    }
+    
     
 }

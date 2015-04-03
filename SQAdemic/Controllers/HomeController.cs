@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using SQAdemic.Models;
 
 namespace SQAdemic.Controllers
 {
     public class HomeController : Controller
     {
+        GameBoardModels board;
         public ActionResult Index()
         {
+            board = new GameBoardModels();
             return View();
         }
 
@@ -25,6 +28,12 @@ namespace SQAdemic.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+        public JsonResult playerDraw()
+        {
+            JsonResult jsonData = new JsonResult();
+            jsonData = Json(board.drawCard());
+            return jsonData;
         }
     }
 }

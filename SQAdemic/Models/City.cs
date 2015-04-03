@@ -16,7 +16,10 @@ namespace SQAdemic.Models
         private int yellowCubes = 0;
         private bool researchStation = false;
         private List<City> adjacentCities;
+        public City()
+        {
 
+        }
         public City(GameBoardModels.COLOR color)
         {
             this.color = color;
