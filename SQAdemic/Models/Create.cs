@@ -9,7 +9,7 @@ namespace SQAdemic.Models
     public class Create
     {
         //create the blues
-        City sanFransisco = new City(GameBoardModels.COLOR.blue);
+        City sanFrancisco = new City(GameBoardModels.COLOR.blue);
         City chicago = new City(GameBoardModels.COLOR.blue);
         City montreal = new City(GameBoardModels.COLOR.blue);
         City newYork = new City(GameBoardModels.COLOR.blue);
