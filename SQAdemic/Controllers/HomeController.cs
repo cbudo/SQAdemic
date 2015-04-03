@@ -30,6 +30,7 @@ namespace SQAdemic.Controllers
 
             return View();
         }
+        [AcceptVerbs(HttpVerbs.Get)]
         public JsonResult playerDraw()
         {
             JsonResult jsonData = new JsonResult();
