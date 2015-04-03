@@ -10,7 +10,7 @@ namespace SQAdemic.Controllers
     public class HomeController : Controller
     {
         GameBoardModels board;
-        public ActionResult Index()
+       public ActionResult Index()
         {
 
             board = new GameBoardModels();
@@ -31,6 +31,7 @@ namespace SQAdemic.Controllers
 
             return View();
         }
+        [AcceptVerbs(HttpVerbs.Get)]
         public JsonResult playerDraw()
         {
             JsonResult jsonData = new JsonResult();
