@@ -10,9 +10,10 @@ namespace SQAdemic.Controllers
     public class HomeController : Controller
     {
         GameBoardModels board;
-        public ActionResult Index()
+       public ActionResult Index()
         {
             board = new GameBoardModels();
+            Console.Write("hit");
             return View();
         }
 
@@ -32,7 +33,8 @@ namespace SQAdemic.Controllers
         public JsonResult playerDraw()
         {
             JsonResult jsonData = new JsonResult();
-            jsonData = Json(board.drawCard());
+            jsonData = Json(board.drawCard()); 
+            Console.Write("hit2");
             return jsonData;
         }
     }
