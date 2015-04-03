@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NUnit.Framework;
 using SQAdemic.Models;
 using Rhino.Mocks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SQAdemicTest
 {
-    [TestFixture()]
-    class BoardModelTest
+    [TestClass]
+    public class BoardModelTest
     {
         private SQAdemic.Models.GameBoardModels BoardModel;
-        [Test()]
+        [TestMethod]
         public void TestThatBoardInitializes()
         {
             BoardModel = new SQAdemic.Models.GameBoardModels();
@@ -25,7 +24,7 @@ namespace SQAdemicTest
             NUnit.Framework.Assert.AreEqual(cures, BoardModel.getCures());
             
         }
-        [Test()]
+        [TestMethod]
         public void TestThatPlayerDrawsCard()
         {
             List<GameBoardModels.Card> cities = new List<GameBoardModels.Card>();
