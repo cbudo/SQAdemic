@@ -12,8 +12,9 @@ namespace SQAdemic.Controllers
         GameBoardModels board;
        public ActionResult Index()
         {
+
             board = new GameBoardModels();
-            Console.Write("hit");
+            Session["board"] = board;
             return View();
         }
 
@@ -34,8 +35,7 @@ namespace SQAdemic.Controllers
         public JsonResult playerDraw()
         {
             JsonResult jsonData = new JsonResult();
-            jsonData = Json(board.drawCard()); 
-            Console.Write("hit2");
+            jsonData = Json(((GameBoardModels)Session["board"]).drawCard());
             return jsonData;
         }
     }
