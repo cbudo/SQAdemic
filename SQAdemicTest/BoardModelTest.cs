@@ -7,6 +7,7 @@ using NUnit.Framework;
 using SQAdemic.Models;
 using Rhino.Mocks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.IO;
 
 namespace SQAdemicTest
 {
@@ -45,6 +46,40 @@ namespace SQAdemicTest
          public void TestThatPlayerDrawsCard()
             {
                 List<GameBoardModels.Card> cities = new List<GameBoardModels.Card>();
+                try
+                {
+                    using (StreamReader reader = new StreamReader("D:\\Documents\\GitHub\\SQAdemic\\SQAdemic\\App_Data\\CityList.txt"))
+                    {
+                        string line;
+                        while ((line = reader.ReadLine()) != null)
+                        {
+                            GameBoardModels.COLOR color = GameBoardModels.COLOR.black;
+                            switch (line.Substring(line.IndexOf(";") + 1).Replace(" ", ""))
+                            {
+                                case "Blue":
+                                    color = GameBoardModels.COLOR.blue;
+                                    break;
+                                case "Black":
+                                    color = GameBoardModels.COLOR.black;
+                                    break;
+                                case "Yellow":
+                                    color = GameBoardModels.COLOR.yellow;
+                                    break;
+                                case "Red":
+                                    color = GameBoardModels.COLOR.red;
+                                    break;
+                                default:
+                                    break;
+
+                            }
+                            cities.Add(new GameBoardModels.Card(line.Substring(0, line.IndexOf(";")), GameBoardModels.CARDTYPE.Player, color));
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
                 cities.Add(new GameBoardModels.Card("CityName", GameBoardModels.CARDTYPE.Player));
                 createDeck deckCreator = new createDeck(BoardModel,cities);
                 deckCreator.makePlayerDeck();
