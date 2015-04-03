@@ -2,6 +2,8 @@
     ViewBag.Title = "Home Page";
 }-->
 <link href="~/Content/Index.css" rel="stylesheet">
+<!--<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="/Scripts/boardmanagment.js" type="text/javascript"></script>-->
 
 
 <div class="map">
@@ -65,6 +67,20 @@
         <p>Blue: &emsp; 24/24</p>
         <p>Black: &emsp; 16/24</p>
     </div>
+    <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        var drawCards = function () {
+            console.log('hit');
+            $.get('playerDraw', function (data) {
+                $('#testplayerreturn').text = data;
+            });
+            $('#button1').hide;
+        }
+    </script>
+
+
 
     <div class="Actions">
         <h2>Take an Action</h2>
@@ -96,5 +112,7 @@
                 </ul>
             </div>
         </div>
+        <input type="button" id="drawcards" value="button1" onclick="drawCards()">
+        <p id="testplayerreturn"></p>
     </div>
 </div>
