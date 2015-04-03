@@ -64,4 +64,30 @@ namespace SQAdemic.Models
         City jakarta = new City(GameBoardModels.COLOR.red);
         City sydney = new City(GameBoardModels.COLOR.red);
     }
+    public class createDeck
+    {
+        public createDeck(GameBoardModels boardModel, List<GameBoardModels.Card> cities)
+        {
+            var rand = new Random();
+            List<GameBoardModels.Card> shuffled = (List<GameBoardModels.Card>) cities.OrderBy(item => rand.Next());
+            // sort in Epidemic cards - attempt to evenly distribute
+            boardModel.playerDeck[rand.Next(0, 9)] = new GameBoardModels.Card("EPIDEMIC", GameBoardModels.CARDTYPE.Player);
+            boardModel.playerDeck[rand.Next(10, 20)] = new GameBoardModels.Card("EPIDEMIC", GameBoardModels.CARDTYPE.Player);
+            boardModel.playerDeck[rand.Next(31, 41)] = new GameBoardModels.Card("EPIDEMIC", GameBoardModels.CARDTYPE.Player);
+            boardModel.playerDeck[rand.Next(42, 52)] = new GameBoardModels.Card("EPIDEMIC", GameBoardModels.CARDTYPE.Player);
+            boardModel.playerDeck[rand.Next(53, 57)] = new GameBoardModels.Card("EPIDEMIC", GameBoardModels.CARDTYPE.Player);
+            while(shuffled.Count < 53)
+            {
+                shuffled.Add(new GameBoardModels.Card("NULL", GameBoardModels.CARDTYPE.Player));
+            }
+            for (int i = 0; i < 58; i++ )
+            {
+                if (boardModel.playerDeck[i] == null)
+                {
+                    boardModel.playerDeck[i] = shuffled[i];
+                }
+            }
+        }
+        
+    }
 }

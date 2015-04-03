@@ -9,6 +9,7 @@ namespace SQAdemic.Models
     {
         infectionCubeCount cubeCount;
         Cures CURESTATUS;
+        public Card[] playerDeck = new Card[58];
         public GameBoardModels()
         {
             cubeCount = new infectionCubeCount();
@@ -43,6 +44,17 @@ namespace SQAdemic.Models
         }
         public class Card
         {
+            public Card(string CityName, CARDTYPE type, COLOR color)
+            {
+                this.CityName = CityName;
+                this.CardType = type;
+                this.CityColor = color;
+            }
+            public Card(string CityName, CARDTYPE type)
+            {
+                this.CityName = CityName;
+                this.CardType = type;
+            }
             public string CityName;
             CARDTYPE CardType {get;set;}
             COLOR CityColor { get; set; }
