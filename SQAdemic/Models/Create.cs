@@ -8,6 +8,7 @@ namespace SQAdemic.Models
 {
     public class Create
     {
+
         //create the blues
         City sanFrancisco = new City(GameBoardModels.COLOR.blue);
         City chicago = new City(GameBoardModels.COLOR.blue);
@@ -63,41 +64,12 @@ namespace SQAdemic.Models
         City hoChiMinhCity = new City(GameBoardModels.COLOR.red);
         City jakarta = new City(GameBoardModels.COLOR.red);
         City sydney = new City(GameBoardModels.COLOR.red);
-    }
-    public class createDeck
-    {
-        GameBoardModels boardModel;
-        List<GameBoardModels.Card> cities;
-        public createDeck(GameBoardModels boardModel, List<GameBoardModels.Card> cities)
+
+        public void setCity()
         {
-            this.boardModel = boardModel;
-            this.cities = cities;
+            
         }
-        public void makePlayerDeck()
-        {
-            var rand = new Random();
-            List<GameBoardModels.Card> shuffled = (List<GameBoardModels.Card>) cities.OrderBy(item => rand.Next()).Select(x => x).ToList<GameBoardModels.Card>();
-            // sort in Epidemic cards - attempt to evenly distribute
-            GameBoardModels.Card EpidemicCard = new GameBoardModels.Card("EPIDEMIC", GameBoardModels.CARDTYPE.Player);
-            boardModel.playerDeck[rand.Next(0, 9)] = EpidemicCard;
-            boardModel.playerDeck[rand.Next(10, 20)] = EpidemicCard;
-            boardModel.playerDeck[rand.Next(31, 41)] = EpidemicCard;
-            boardModel.playerDeck[rand.Next(42, 52)] = EpidemicCard;
-            boardModel.playerDeck[rand.Next(53, 57)] = EpidemicCard;
-            while(shuffled.Count <= 53)
-            {
-                shuffled.Add(new GameBoardModels.Card("NULL", GameBoardModels.CARDTYPE.Player));
-            }
-            int j = 0; // index shuffled
-            for (int i = 0; i < 58; i++ )
-            {
-                if (boardModel.playerDeck[i] == null)
-                {
-                    boardModel.playerDeck[i] = shuffled[j];
-                    j++;
-                }
-            }
-        }
-        
+
     }
+
 }
