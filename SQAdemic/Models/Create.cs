@@ -65,7 +65,7 @@ namespace SQAdemic.Models
         City jakarta = new City(GameBoardModels.COLOR.red);
         City sydney = new City(GameBoardModels.COLOR.red);
 
-        public void setCity()
+        public void setAdjacentCities()
         {
             
         }

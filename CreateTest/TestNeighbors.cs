@@ -11,6 +11,7 @@ namespace CreateTest
         public void TestSanFranNeighbors()
         {
             List<SQAdemic.Models.City> sflist = new List<SQAdemic.Models.City>();
+            SQAdemic.Models.City sanFransisco = new SQAdemic.Models.City();
             SQAdemic.Models.City chicago =  new SQAdemic.Models.City();
             SQAdemic.Models.City losAngeles =  new SQAdemic.Models.City();
             SQAdemic.Models.City tokyo =  new SQAdemic.Models.City();
@@ -19,7 +20,8 @@ namespace CreateTest
             sflist.Add(losAngeles);
             sflist.Add(tokyo);
             sflist.Add(manila);
-            //Assert.AreEqual(sflist, SQAdemic.Models.....how do this);
+            sanFransisco.setAdjacentCities(sflist);
+            Assert.AreEqual(sflist, sanFransisco.getAdjacentCities());
 
         }
     }
