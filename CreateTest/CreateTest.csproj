@@ -57,6 +57,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SQAdemicTest\SQAdemicTest.csproj">
+      <Project>{bf2325f9-9636-4134-9d88-0d6e65b16ae3}</Project>
+      <Name>SQAdemicTest</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SQAdemic\SQAdemic.csproj">
       <Project>{33afa498-76ab-4667-bb9c-35430dab457c}</Project>
       <Name>SQAdemic</Name>

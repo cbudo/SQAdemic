@@ -53,8 +53,8 @@ namespace SQAdemic.Models
             cubeCount.blackCubes = cubeCount.redCubes = cubeCount.blueCubes = cubeCount.yellowCubes = 24;
             CURESTATUS = new Cures();
             CURESTATUS.BlackCure = CURESTATUS.BlueCure = CURESTATUS.RedCure = CURESTATUS.YellowCure = CURESTATE.NotCured;
-            createDeck createDeck = new createDeck(this,cities);
-            createDeck.makePlayerDeck();
+//            createDeck createDeck = new createDeck(this,cities);
+//            createDeck.makePlayerDeck();
         }
         public int[] getCubes()
         {

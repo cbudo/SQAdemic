@@ -8,6 +8,7 @@ namespace SQAdemic.Models
 {
     public class City
     {
+
         public string Name;
         public GameBoardModels.COLOR color;
         private int redCubes = 0;
@@ -45,4 +46,5 @@ namespace SQAdemic.Models
 
         }
     }
+
 }

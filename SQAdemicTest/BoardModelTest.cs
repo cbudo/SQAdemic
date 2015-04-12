@@ -30,8 +30,8 @@ namespace SQAdemicTest
         {
             List<GameBoardModels.Card> cities = new List<GameBoardModels.Card>();
             cities.Add(new GameBoardModels.Card("CityName", GameBoardModels.CARDTYPE.Player));
-            createDeck deckCreator = new createDeck(BoardModel,cities);
-            deckCreator.makePlayerDeck();
+            //createDeck deckCreator = new createDeck(BoardModel,cities);
+            //deckCreator.makePlayerDeck();
             NUnit.Framework.Assert.AreNotEqual(null, BoardModel.drawCard());
 
         }
@@ -80,8 +80,8 @@ namespace SQAdemicTest
 
                 }
                 cities.Add(new GameBoardModels.Card("CityName", GameBoardModels.CARDTYPE.Player));
-                createDeck deckCreator = new createDeck(BoardModel,cities);
-                deckCreator.makePlayerDeck();
+               // createDeck deckCreator = new createDeck(BoardModel,cities);
+                //deckCreator.makePlayerDeck();
                 Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreNotEqual(null, BoardModel.drawCard());
              
             }
