@@ -12,9 +12,7 @@ namespace SQAdemic.Controllers
         GameBoardModels board;
        public ActionResult Index()
         {
-
             board = new GameBoardModels();
-            Session["board"] = board;
             return View();
         }
 
@@ -35,7 +33,7 @@ namespace SQAdemic.Controllers
         public JsonResult playerDraw()
         {
             JsonResult jsonData = new JsonResult();
-            jsonData = Json(((GameBoardModels)Session["board"]).drawCard());
+            jsonData = Json(board.drawCard());
             return jsonData;
         }
     }
