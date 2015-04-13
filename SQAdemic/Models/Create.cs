@@ -76,7 +76,13 @@ namespace SQAdemic.Models
             sanFrancisco.setAdjacentCities(sflist);
 
             //Sets neighbors for Chicago
-
+            List<City> chicagoList = new List<City>();
+            chicagoList.Add(sanFrancisco);
+            chicagoList.Add(mexicoCity);
+            chicagoList.Add(montreal);
+            chicagoList.Add(atlanta);
+            chicagoList.Add(losAngeles);
+            chicago.setAdjacentCities(chicagoList);
         }
 
     }
