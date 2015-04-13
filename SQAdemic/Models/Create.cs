@@ -67,12 +67,16 @@ namespace SQAdemic.Models
 
         public void setAdjacentCities()
         {
+            //sets neighbors for San Fran
             List<City> sflist = new List<City>();
             sflist.Add(chicago);
             sflist.Add(losAngeles);
             sflist.Add(tokyo);
             sflist.Add(manila);
             sanFrancisco.setAdjacentCities(sflist);
+
+            //Sets neighbors for Chicago
+
         }
 
     }

@@ -25,5 +25,25 @@ namespace CreateTest
             Assert.AreEqual(sflist, sanFransisco.getAdjacentCities());
 
         }
+
+        [TestMethod]
+        public void TestChicagoNeighbors()
+        {
+            City chicago = new City();
+            List<City> chicagoList = new List<City>();
+            City sanFran = new City();
+            City montreal = new City();
+            City atlanta = new City();
+            City mexicoCity = new City();
+            City losAngeles = new City();
+            chicagoList.Add(sanFran);
+            chicagoList.Add(mexicoCity);
+            chicagoList.Add(montreal);
+            chicagoList.Add(atlanta);
+            chicagoList.Add(losAngeles);
+            chicago.setAdjacentCities(chicagoList);
+            Assert.AreEqual(chicagoList, chicago.getAdjacentCities());
+            
+        }
     }
 }
